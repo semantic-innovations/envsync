@@ -16,7 +16,8 @@ describe('template logic', () => {
   });
 
   it('should strip real values but keep structure', () => {
-    const envContent = '# Database\nDB_HOST=localhost\nDB_PORT=5432\n\n# API\nAPI_KEY=sk_live_abc123';
+    const fakeKey = 'my_secret_api_key_12345';
+    const envContent = '# Database\nDB_HOST=localhost\nDB_PORT=5432\n\n# API\nAPI_KEY=' + fakeKey;
     fs.writeFileSync(path.join(tmpDir, '.env'), envContent);
 
     const content = fs.readFileSync(path.join(tmpDir, '.env'), 'utf-8');
@@ -43,6 +44,6 @@ describe('template logic', () => {
     assert.ok(output.includes('DB_HOST='));
     assert.ok(output.includes('API_KEY='));
     assert.ok(!output.some((l) => l.includes('localhost')));
-    assert.ok(!output.some((l) => l.includes('sk_live')));
+    assert.ok(!output.some((l) => l.includes(fakeKey)));
   });
 });

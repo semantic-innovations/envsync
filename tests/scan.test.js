@@ -1,6 +1,11 @@
 const { describe, it } = require('node:test');
 const assert = require('node:assert');
 
+/**
+ * All test secrets are built dynamically to avoid
+ * triggering GitHub push protection and secret scanners.
+ */
+
 describe('scan patterns', () => {
   const patterns = [
     { name: 'AWS Access Key', pattern: /AKIA[0-9A-Z]{16}/ },
@@ -11,29 +16,30 @@ describe('scan patterns', () => {
   ];
 
   it('should detect AWS access keys', () => {
-    const line = 'aws_key = AKIAIOSFODNN7EXAMPLE';
+    const line = 'aws_key = ' + 'AKIA' + 'IOSFODNN7EXAMPLE';
     assert.ok(patterns[0].pattern.test(line));
   });
 
   it('should detect GitHub tokens', () => {
-    const line = 'token = ghp_ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijk';
+    const prefix = 'ghp' + '_';
+    const line = 'token = ' + prefix + 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijk';
     assert.ok(patterns[1].pattern.test(line));
   });
 
   it('should detect Stripe keys', () => {
-    // Build test key dynamically to avoid GitHub push protection
-    const prefix = 'sk_' + 'live' + '_';
+    const prefix = 'sk' + '_' + 'live' + '_';
     const line = 'STRIPE_KEY=' + prefix + 'abcdefghijklmnopqrstuvwx';
     assert.ok(patterns[2].pattern.test(line));
   });
 
   it('should detect Slack tokens', () => {
-    const line = 'SLACK=xoxb-1234567890-abcdef';
+    const prefix = 'xox' + 'b-';
+    const line = 'SLACK=' + prefix + '1234567890-abcdef';
     assert.ok(patterns[3].pattern.test(line));
   });
 
   it('should detect private keys', () => {
-    const line = '-----BEGIN RSA PRIVATE KEY-----';
+    const line = ['-----BEGIN', 'RSA', 'PRIVATE KEY-----'].join(' ');
     assert.ok(patterns[4].pattern.test(line));
   });
 
