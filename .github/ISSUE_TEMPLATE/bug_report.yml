@@ -1,0 +1,65 @@
+name: Bug Report
+description: Report a bug with envsync
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill out the details below.
+
+  - type: input
+    id: version
+    attributes:
+      label: envsync version
+      description: Run `envsync --version` to find this
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js version
+      description: Run `node --version` to find this
+      placeholder: "v20.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: command
+    attributes:
+      label: Which command?
+      options:
+        - check
+        - diff
+        - lint
+        - scan
+        - template
+        - other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug clearly
+      placeholder: When I run `envsync check`, it shows...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      placeholder: I expected it to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: env-file
+    attributes:
+      label: ".env file content (redacted)"
+      description: Share a simplified version of your .env (remove real secrets!)
+      render: shell

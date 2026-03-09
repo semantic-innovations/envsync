@@ -4,10 +4,11 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/envsync-cli"><img src="https://img.shields.io/npm/v/envsync-cli?style=flat-square&color=22d3ee&label=npm" alt="npm version" /></a>
+  <a href="https://www.npmjs.com/package/envsync-cli"><img src="https://img.shields.io/npm/dm/envsync-cli?style=flat-square&color=89b4fa&label=downloads" alt="npm downloads" /></a>
+  <a href="https://github.com/semantic-innovations/envsync/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/semantic-innovations/envsync/ci.yml?style=flat-square&label=tests" alt="CI" /></a>
   <a href="https://github.com/semantic-innovations/envsync/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-818cf8?style=flat-square" alt="license" /></a>
   <img src="https://img.shields.io/badge/dependencies-0-4ade80?style=flat-square" alt="zero dependencies" />
   <img src="https://img.shields.io/badge/node-%3E%3D18-f9e2af?style=flat-square" alt="node version" />
-  <img src="https://img.shields.io/badge/tests-25%20passing-a6e3a1?style=flat-square" alt="tests" />
 </p>
 
 <p align="center">

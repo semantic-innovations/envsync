@@ -1,0 +1,48 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature! We love hearing ideas from the community.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the pain point or use case
+      placeholder: I frequently need to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: How do you imagine this working?
+      placeholder: |
+        A new command like `envsync xyz` that...
+
+        Example usage:
+        ```bash
+        envsync xyz --flag
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any other approaches you've thought about?
+
+  - type: dropdown
+    id: contribution
+    attributes:
+      label: Would you like to contribute this?
+      options:
+        - "Yes, I'd like to submit a PR"
+        - "Maybe, with some guidance"
+        - "No, just suggesting"

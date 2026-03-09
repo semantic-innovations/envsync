@@ -1,7 +1,7 @@
 {
   "name": "envsync-cli",
   "version": "1.0.0",
-  "description": "Validate, compare, and manage .env files across your projects",
+  "description": "Validate, compare, lint, and secure .env files — zero dependencies CLI tool",
   "main": "src/index.js",
   "bin": {
     "envsync": "./bin/envsync.js"
@@ -14,14 +14,36 @@
     "env",
     "dotenv",
     "environment",
+    "environment-variables",
     "validation",
     "cli",
     "sync",
     "secrets",
-    "configuration"
+    "secret-scanning",
+    "configuration",
+    "devtools",
+    "developer-tools",
+    "lint",
+    "linter",
+    "env-check",
+    "env-diff",
+    "env-lint",
+    "env-scan",
+    "ci",
+    "security",
+    "dotenv-vault",
+    "env-file"
   ],
-  "author": "",
+  "author": "Semantic Innovations <https://github.com/semantic-innovations>",
   "license": "MIT",
+  "homepage": "https://github.com/semantic-innovations/envsync#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semantic-innovations/envsync.git"
+  },
+  "bugs": {
+    "url": "https://github.com/semantic-innovations/envsync/issues"
+  },
   "engines": {
     "node": ">=18.0.0"
   },
@@ -29,6 +51,7 @@
     "bin/",
     "src/",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "CHANGELOG.md"
   ]
 }
