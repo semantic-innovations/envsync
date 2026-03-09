@@ -1,5 +1,5 @@
 {
-  "name": "@semantic-innovations/envsync",
+  "name": "envsync-cli",
   "version": "1.0.0",
   "description": "Validate, compare, lint, and secure .env files — zero dependencies CLI tool",
   "main": "src/index.js",
