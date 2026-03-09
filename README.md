@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/envsync"><img src="https://img.shields.io/npm/v/envsync?style=flat-square&color=22d3ee&label=npm" alt="npm version" /></a>
-  <a href="https://www.npmjs.com/package/envsync"><img src="https://img.shields.io/npm/dm/envsync?style=flat-square&color=89b4fa&label=downloads" alt="npm downloads" /></a>
+  <a href="https://www.npmjs.com/package/@semantic-innovations/envsync"><img src="https://img.shields.io/npm/v/@semantic-innovations/envsync?style=flat-square&color=22d3ee&label=npm" alt="npm version" /></a>
+  <a href="https://www.npmjs.com/package/@semantic-innovations/envsync"><img src="https://img.shields.io/npm/dm/envsync?style=flat-square&color=89b4fa&label=downloads" alt="npm downloads" /></a>
   <a href="https://github.com/semantic-innovations/envsync/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/semantic-innovations/envsync/ci.yml?style=flat-square&label=tests" alt="CI" /></a>
   <a href="https://github.com/semantic-innovations/envsync/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-818cf8?style=flat-square" alt="license" /></a>
   <img src="https://img.shields.io/badge/dependencies-0-4ade80?style=flat-square" alt="zero dependencies" />
@@ -45,7 +45,7 @@ Your `.env.example` says one thing. Your `.env` says another.
 **One tool. Five commands. Zero headaches.**
 
 ```bash
-npm install -g envsync
+npm install -g @semantic-innovations/envsync
 ```
 
 That's it. No config files. No setup. No dependencies to install.
@@ -65,7 +65,7 @@ envsync template    # Generate .env.example automatically
 Or run without installing:
 
 ```bash
-npx envsync check
+npx @semantic-innovations/envsync check
 ```
 
 <br/>
@@ -206,8 +206,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-      - run: npx envsync check --ci
-      - run: npx envsync scan --ci
+      - run: npx @semantic-innovations/envsync check --ci
+      - run: npx @semantic-innovations/envsync scan --ci
 ```
 
 ### Pre-commit Hook
@@ -224,7 +224,7 @@ jobs:
 Or with **[husky](https://github.com/typicode/husky)**:
 
 ```bash
-npx husky add .husky/pre-commit "npx envsync scan --ci"
+npx husky add .husky/pre-commit "npx @semantic-innovations/envsync scan --ci"
 ```
 
 ### GitLab CI
@@ -232,8 +232,8 @@ npx husky add .husky/pre-commit "npx envsync scan --ci"
 ```yaml
 env-check:
   script:
-    - npx envsync check --ci
-    - npx envsync scan --ci
+    - npx @semantic-innovations/envsync check --ci
+    - npx @semantic-innovations/envsync scan --ci
 ```
 
 <br/>
