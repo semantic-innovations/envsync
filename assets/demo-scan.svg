@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="310" viewBox="0 0 620 310">
+  <defs>
+    <linearGradient id="tbg2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e2e"/>
+      <stop offset="100%" style="stop-color:#181825"/>
+    </linearGradient>
+  </defs>
+  <rect width="620" height="310" rx="10" fill="url(#tbg2)"/>
+  <rect width="620" height="36" rx="10" fill="#313244"/>
+  <rect x="0" y="26" width="620" height="10" fill="#313244"/>
+  <circle cx="20" cy="18" r="6" fill="#f38ba8"/>
+  <circle cx="40" cy="18" r="6" fill="#f9e2af"/>
+  <circle cx="60" cy="18" r="6" fill="#a6e3a1"/>
+  <text x="310" y="23" font-family="'SF Mono', 'Fira Code', monospace" font-size="12" fill="#cdd6f4" text-anchor="middle">envsync scan</text>
+
+  <g transform="translate(24, 56)">
+    <text font-family="'SF Mono', 'Fira Code', monospace" font-size="13" fill="#89b4fa">
+      <tspan x="0" dy="0">$</tspan><tspan fill="#cdd6f4"> envsync scan</tspan>
+    </text>
+
+    <text y="36" font-family="'SF Mono', 'Fira Code', monospace" font-size="13" font-weight="bold" fill="#cdd6f4">  envsync scan</text>
+    <text y="56" font-family="'SF Mono', 'Fira Code', monospace" font-size="13" fill="#585b70">  ────────────────────────────────────────</text>
+    <text y="76" font-family="'SF Mono', 'Fira Code', monospace" font-size="13" fill="#585b70">  Scanning: ~/my-project</text>
+
+    <text y="104" font-family="'SF Mono', 'Fira Code', monospace" font-size="13">
+      <tspan fill="#f9e2af">  ⚠</tspan><tspan fill="#cdd6f4" font-weight="bold"> AWS Access Key</tspan>
+    </text>
+    <text y="122" font-family="'SF Mono', 'Fira Code', monospace" font-size="13">
+      <tspan fill="#585b70">    File: </tspan><tspan fill="#cdd6f4">config/aws.json:12</tspan>
+    </text>
+    <text y="140" font-family="'SF Mono', 'Fira Code', monospace" font-size="13">
+      <tspan fill="#585b70">    Match: </tspan><tspan fill="#f38ba8">AKIA****MPLE</tspan>
+    </text>
+
+    <text y="168" font-family="'SF Mono', 'Fira Code', monospace" font-size="13">
+      <tspan fill="#f9e2af">  ⚠</tspan><tspan fill="#cdd6f4" font-weight="bold"> GitHub Token</tspan>
+    </text>
+    <text y="186" font-family="'SF Mono', 'Fira Code', monospace" font-size="13">
+      <tspan fill="#585b70">    File: </tspan><tspan fill="#cdd6f4">scripts/deploy.sh:5</tspan>
+    </text>
+    <text y="204" font-family="'SF Mono', 'Fira Code', monospace" font-size="13">
+      <tspan fill="#585b70">    Match: </tspan><tspan fill="#f38ba8">ghp_****fghi</tspan>
+    </text>
+
+    <text y="230" font-family="'SF Mono', 'Fira Code', monospace" font-size="13" fill="#585b70">  ────────────────────────────────────────</text>
+    <text y="252" font-family="'SF Mono', 'Fira Code', monospace" font-size="13">
+      <tspan fill="#f9e2af">  2 warnings</tspan>
+    </text>
+  </g>
+</svg>
